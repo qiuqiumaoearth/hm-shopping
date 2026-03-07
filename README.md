@@ -1,4 +1,4 @@
-# 智慧商城 - 授课大纲
+# 智慧商城
 
 接口文档：<https://apifox.com/apidoc/shared-12ab6b18-adc2-444c-ad11-0e60f5693f66/doc-2221080>
 
@@ -32,7 +32,7 @@ npm i @vue/cli -g
 vue create hm-shopping
 ```
 
-+ 选项
+- 选项
 
 ```js
 Vue CLI v5.0.8
@@ -42,47 +42,47 @@ Vue CLI v5.0.8
 > Manually select features     选自定义
 ```
 
-+ 手动选择功能
+- 手动选择功能
 
 ![68294185617](assets/1682941856172.png)
 
-+ 选择vue的版本
+- 选择 vue 的版本
 
 ```jsx
   3.x
 > 2.x
 ```
 
-+ 是否使用history模式
+- 是否使用 history 模式
 
 ![image-20201025150602129](assets/1682941888453.png)
 
-+ 选择css预处理
+- 选择 css 预处理
 
 ![image-20220629175133593](assets/1682941900018.png)
 
-+ 选择eslint的风格 （eslint 代码规范的检验工具，检验代码是否符合规范）
-+ 比如：const age = 18;   =>  报错！多加了分号！后面有工具，一保存，全部格式化成最规范的样子
+- 选择 eslint 的风格 （eslint 代码规范的检验工具，检验代码是否符合规范）
+- 比如：const age = 18; => 报错！多加了分号！后面有工具，一保存，全部格式化成最规范的样子
 
 ![68294191856](assets/1682941918562.png)
 
-+ 选择校验的时机 （直接回车）
+- 选择校验的时机 （直接回车）
 
 ![68294193579](assets/1682941935794.png)
 
-+ 选择配置文件的生成方式 （直接回车）
+- 选择配置文件的生成方式 （直接回车）
 
 ![68294194798](assets/1682941947985.png)
 
-+ 是否保存预设，下次直接使用？  =>   不保存，输入 N
+- 是否保存预设，下次直接使用？ => 不保存，输入 N
 
 ![68294196155](assets/1682941961551.png)
 
-+ 等待安装，项目初始化完成
+- 等待安装，项目初始化完成
 
 ![68294197476](assets/1682941974763.png)
 
-+ 启动项目
+- 启动项目
 
 ```
 npm run serve
@@ -103,10 +103,10 @@ yarn serve
 
 ### 1.删除文件
 
-+ src/assets/logo.png
-+ src/components/HelloWorld.vue
-+ src/views/AboutView.vue
-+ src/views/HomeView.vue
+- src/assets/logo.png
+- src/components/HelloWorld.vue
+- src/views/AboutView.vue
+- src/views/HomeView.vue
 
 ### 2.修改文件
 
@@ -117,20 +117,18 @@ yarn serve
 删除默认的路由配置
 
 ```js
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
-const routes = [
-]
+const routes = [];
 
 const router = new VueRouter({
   routes
-})
+});
 
-export default router
-
+export default router;
 ```
 
 `App.vue`
@@ -138,23 +136,23 @@ export default router
 ```html
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 ```
 
 ### 3.新增目录
 
-+ src/api 目录
-  + 存储接口模块 (发送ajax请求接口的模块)
-+ src/utils 目录
-  + 存储一些工具模块 (自己封装的方法)
+- src/api 目录
+  - 存储接口模块 (发送 ajax 请求接口的模块)
+- src/utils 目录
+  - 存储一些工具模块 (自己封装的方法)
 
 目录效果如下:
 
 ![image-20230616184644176](assets/image-20230616184644176.png)
 
-## 04. vant组件库及Vue周边的其他组件库
+## 04. vant 组件库及 Vue 周边的其他组件库
 
 > 组件库：第三方封装好了很多很多的组件，整合到一起就是一个组件库。
 >
@@ -191,8 +189,8 @@ pc
 
 ## 06. 全部导入
 
-+ 安装vant-ui
-最快捷且不破坏现有项目的方式，npm 从 v7 开始默认严格校验对等依赖，--legacy-peer-deps 会恢复到 v6 的宽松模式，适合解决这类版本不匹配问题
+- 安装 vant-ui
+  最快捷且不破坏现有项目的方式，npm 从 v7 开始默认严格校验对等依赖，--legacy-peer-deps 会恢复到 v6 的宽松模式，适合解决这类版本不匹配问题
 
 ```bash'
 yarn add vant@latest-v2
@@ -201,16 +199,16 @@ yarn add vant@latest-v2
 npm i vant@latest-v2 -S --legacy-peer-deps
 ```
 
-+ 在main.js中
+- 在 main.js 中
 
 ```js
-import Vant from 'vant';
-import 'vant/lib/index.css';
+import Vant from "vant";
+import "vant/lib/index.css";
 // 把vant中所有的组件都导入了
-Vue.use(Vant)
+Vue.use(Vant);
 ```
 
-+ 即可使用
+- 即可使用
 
 ```jsx
 <van-button type="primary">主要按钮</van-button>
@@ -219,49 +217,51 @@ Vue.use(Vant)
 
 ![68294483040](assets/1682944830403.png)
 
-vant-ui提供了很多的组件，全部导入，会导致项目打包变得很大。
+vant-ui 提供了很多的组件，全部导入，会导致项目打包变得很大。
 
 ## 07. 按需导入
 
-+ 安装vant-ui
+- 安装 vant-ui
 
 ```
 yarn add vant@latest-v2
 ```
 
-+ 安装一个插件
+- 安装一个插件
 
 ```jsd
 yarn add babel-plugin-import -D
 ```
 
-+ 在`babel.config.js`中配置
+- 在`babel.config.js`中配置
 
 ```js
 module.exports = {
-  presets: [
-    '@vue/cli-plugin-babel/preset'
-  ],
+  presets: ["@vue/cli-plugin-babel/preset"],
   plugins: [
-    ['import', {
-      libraryName: 'vant',
-      libraryDirectory: 'es',
-      style: true
-    }, 'vant']
+    [
+      "import",
+      {
+        libraryName: "vant",
+        libraryDirectory: "es",
+        style: true
+      },
+      "vant"
+    ]
   ]
-}
+};
 ```
 
-+ 按需加载，在`main.js`
+- 按需加载，在`main.js`
 
 ```js
-import { Button, Icon } from 'vant'
+import { Button, Icon } from "vant";
 
-Vue.use(Button)
-Vue.use(Icon)
+Vue.use(Button);
+Vue.use(Icon);
 ```
 
-+ `app.vue`中进行测试
+- `app.vue`中进行测试
 
 ```js
 <van-button type="primary">主要按钮</van-button>
@@ -271,23 +271,23 @@ Vue.use(Icon)
 <van-button type="danger">危险按钮</van-button>
 ```
 
-+ 把引入组件的步骤抽离到单独的js文件中比如 `utils/vant-ui.js`
+- 把引入组件的步骤抽离到单独的 js 文件中比如 `utils/vant-ui.js`
 
 ```js
-import { Button, Icon } from 'vant'
+import { Button, Icon } from "vant";
 
-Vue.use(Button)
-Vue.use(Icon)
+Vue.use(Button);
+Vue.use(Icon);
 ```
 
-main.js中进行导入
+main.js 中进行导入
 
 ```js
 // 导入按需导入的配置文件
-import '@/utils/vant-ui'
+import "@/utils/vant-ui";
 ```
 
-## 08. 项目中的vw适配
+## 08. 项目中的 vw 适配
 
 官方说明：<https://vant-ui.github.io/vant/v2/#/zh-CN/advanced-usage>
 
@@ -295,24 +295,24 @@ import '@/utils/vant-ui'
 yarn add postcss-px-to-viewport@1.1.1 -D
 ```
 
-+ 项目根目录， 新建postcss的配置文件`postcss.config.js`
+- 项目根目录， 新建 postcss 的配置文件`postcss.config.js`
 
 ```jsx
 // postcss.config.js
 module.exports = {
   plugins: {
-    'postcss-px-to-viewport': {
-      viewportWidth: 375,
-    },
-  },
+    "postcss-px-to-viewport": {
+      viewportWidth: 375
+    }
+  }
 };
 ```
 
 viewportWidth:设计稿的视口宽度
 
-1. vant-ui中的组件就是按照375的视口宽度设计的
-2. 恰好面经项目中的设计稿也是按照375的视口宽度设计的，所以此时 我们只需要配置375就可以了
-3. 如果设计稿不是按照375而是按照750的宽度设计，[那此时这个值该怎么填呢？](https://zhuanlan.zhihu.com/p/366664788)
+1. vant-ui 中的组件就是按照 375 的视口宽度设计的
+2. 恰好面经项目中的设计稿也是按照 375 的视口宽度设计的，所以此时 我们只需要配置 375 就可以了
+3. 如果设计稿不是按照 375 而是按照 750 的宽度设计，[那此时这个值该怎么填呢？](https://zhuanlan.zhihu.com/p/366664788)
 
 ## 09. 路由配置 - 一级路由
 
@@ -320,70 +320,70 @@ viewportWidth:设计稿的视口宽度
 
 路由设计：
 
-+ 登录页
-+ 首页架子
-  + 首页 - 二级
-  + 分类页 - 二级
-  + 购物车 - 二级
-  + 我的 - 二级
-+ 搜索页
-+ 搜索列表页
-+ 商品详情页
-+ 结算支付页
-+ 我的订单页
+- 登录页
+- 首页架子
+  - 首页 - 二级
+  - 分类页 - 二级
+  - 购物车 - 二级
+  - 我的 - 二级
+- 搜索页
+- 搜索列表页
+- 商品详情页
+- 结算支付页
+- 我的订单页
 
 `router/index.js` 配置一级路由，新建对应的页面文件
 
 ```jsx
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Layout from '@/views/layout'
-import Search from '@/views/search'
-import SearchList from '@/views/search/list'
-import ProDetail from '@/views/prodetail'
-import Login from '@/views/login'
-import Pay from '@/views/pay'
-import MyOrder from '@/views/myorder'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Layout from "@/views/layout";
+import Search from "@/views/search";
+import SearchList from "@/views/search/list";
+import ProDetail from "@/views/prodetail";
+import Login from "@/views/login";
+import Pay from "@/views/pay";
+import MyOrder from "@/views/myorder";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const router = new VueRouter({
   routes: [
     {
-      path: '/login',
+      path: "/login",
       component: Login
     },
     {
-      path: '/',
+      path: "/",
       component: Layout
     },
     {
-      path: '/search',
+      path: "/search",
       component: Search
     },
     {
-      path: '/searchlist',
+      path: "/searchlist",
       component: SearchList
     },
     {
-      path: '/prodetail/:id',
+      path: "/prodetail/:id",
       component: ProDetail
     },
     {
-      path: '/pay',
+      path: "/pay",
       component: Pay
     },
     {
-      path: '/myorder',
+      path: "/myorder",
       component: MyOrder
     }
   ]
-})
+});
 
-export default router
+export default router;
 ```
 
-## 10. 路由配置-tabbar标签页
+## 10. 路由配置-tabbar 标签页
 
 ![image-20230617152947594](assets/image-20230617152947594.png)
 
@@ -392,9 +392,9 @@ export default router
 `vant-ui.js` 引入组件
 
 ```jsx
-import { Tabbar, TabbarItem } from 'vant'
-Vue.use(Tabbar)
-Vue.use(TabbarItem)
+import { Tabbar, TabbarItem } from "vant";
+Vue.use(Tabbar);
+Vue.use(TabbarItem);
 ```
 
 `layout.vue`
@@ -422,95 +422,104 @@ Vue.use(TabbarItem)
 1. `router/index.js`配置二级路由
 
 ```jsx
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Layout from '@/views/layout'
-import Search from '@/views/search'
-import SearchList from '@/views/search/list'
-import ProDetail from '@/views/prodetail'
-import Login from '@/views/login'
-import Pay from '@/views/pay'
-import MyOrder from '@/views/myorder'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Layout from "@/views/layout";
+import Search from "@/views/search";
+import SearchList from "@/views/search/list";
+import ProDetail from "@/views/prodetail";
+import Login from "@/views/login";
+import Pay from "@/views/pay";
+import MyOrder from "@/views/myorder";
 
-import Home from '@/views/layout/home'
-import Category from '@/views/layout/category'
-import Cart from '@/views/layout/cart'
-import User from '@/views/layout/user'
+import Home from "@/views/layout/home";
+import Category from "@/views/layout/category";
+import Cart from "@/views/layout/cart";
+import User from "@/views/layout/user";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const router = new VueRouter({
   routes: [
     {
-      path: '/login',
+      path: "/login",
       component: Login
     },
     {
-      path: '/',
+      path: "/",
       component: Layout,
-      redirect: '/home',
+      redirect: "/home",
       children: [
         {
-          path: 'home',
+          path: "home",
           component: Home
         },
         {
-          path: 'category',
+          path: "category",
           component: Category
         },
         {
-          path: 'cart',
+          path: "cart",
           component: Cart
         },
         {
-          path: 'user',
+          path: "user",
           component: User
         }
       ]
     },
     {
-      path: '/search',
+      path: "/search",
       component: Search
     },
     {
-      path: '/searchlist',
+      path: "/searchlist",
       component: SearchList
     },
     {
-      path: '/prodetail/:id',
+      path: "/prodetail/:id",
       component: ProDetail
     },
     {
-      path: '/pay',
+      path: "/pay",
       component: Pay
     },
     {
-      path: '/myorder',
+      path: "/myorder",
       component: MyOrder
     }
   ]
-})
+});
 
-export default router
+export default router;
 ```
 
 1. 准备对应的组件文件
-   + `layout/home.vue`
-   + `layout/category.vue`
-   + `layout/cart.vue`
-   + `layout/user.vue`
 
-2. `layout.vue` 配置路由出口,  配置 tabbar
+   - `layout/home.vue`
+   - `layout/category.vue`
+   - `layout/cart.vue`
+   - `layout/user.vue`
+
+2. `layout.vue` 配置路由出口, 配置 tabbar
 
 ```jsx
 <template>
   <div>
     <router-view></router-view>
     <van-tabbar route active-color="#ee0a24" inactive-color="#000">
-      <van-tabbar-item to="/home" icon="wap-home-o">首页</van-tabbar-item>
-      <van-tabbar-item to="/category" icon="apps-o">分类页</van-tabbar-item>
-      <van-tabbar-item to="/cart" icon="shopping-cart-o">购物车</van-tabbar-item>
-      <van-tabbar-item to="/user" icon="user-o">我的</van-tabbar-item>
+      <van-tabbar-item to="/home" icon="wap-home-o">
+        首页
+      </van-tabbar-item>
+      <van-tabbar-item to="/category" icon="apps-o">
+        分类页
+      </van-tabbar-item>
+      <van-tabbar-item to="/cart" icon="shopping-cart-o">
+        购物车
+      </van-tabbar-item>
+      <van-tabbar-item to="/user" icon="user-o">
+        我的
+      </van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
@@ -520,7 +529,7 @@ export default router
 
 ### (1) 准备工作
 
-1. 新建  `styles/common.less` 重置默认样式
+1. 新建 `styles/common.less` 重置默认样式
 
 ```jsx
 // 重置默认样式
@@ -542,9 +551,9 @@ export default router
 
 1. main.js 中导入应用
 
-    ```jsx
-    import '@/styles/common.less'
-    ```
+   ```jsx
+   import "@/styles/common.less";
+   ```
 
 2. 将准备好的一些图片素材拷贝到 assets 目录【备用】
 
@@ -556,13 +565,13 @@ export default router
 
 使用组件
 
-+ van-nav-bar
+- van-nav-bar
 
 `vant-ui.js` 注册
 
 ```jsx
-import { NavBar } from 'vant'
-Vue.use(NavBar)
+import { NavBar } from "vant";
+Vue.use(NavBar);
 ```
 
 `Login.vue` 使用
@@ -579,14 +588,24 @@ Vue.use(NavBar)
 
       <div class="form">
         <div class="form-item">
-          <input class="inp" maxlength="11" placeholder="请输入手机号码" type="text">
+          <input
+            class="inp"
+            maxlength="11"
+            placeholder="请输入手机号码"
+            type="text"
+          />
         </div>
         <div class="form-item">
-          <input class="inp" maxlength="5" placeholder="请输入图形验证码" type="text">
-          <img src="@/assets/code.png" alt="">
+          <input
+            class="inp"
+            maxlength="5"
+            placeholder="请输入图形验证码"
+            type="text"
+          />
+          <img src="@/assets/code.png" alt="" />
         </div>
         <div class="form-item">
-          <input class="inp" placeholder="请输入短信验证码" type="text">
+          <input class="inp" placeholder="请输入短信验证码" type="text" />
           <button>获取验证码</button>
         </div>
       </div>
@@ -597,70 +616,70 @@ Vue.use(NavBar)
 </template>
 
 <script>
-export default {
-  name: 'LoginPage'
-}
+  export default {
+    name: "LoginPage"
+  };
 </script>
 
 <style lang="less" scoped>
-.container {
-  padding: 49px 29px;
+  .container {
+    padding: 49px 29px;
 
-  .title {
-    margin-bottom: 20px;
-    h3 {
-      font-size: 26px;
-      font-weight: normal;
+    .title {
+      margin-bottom: 20px;
+      h3 {
+        font-size: 26px;
+        font-weight: normal;
+      }
+      p {
+        line-height: 40px;
+        font-size: 14px;
+        color: #b8b8b8;
+      }
     }
-    p {
-      line-height: 40px;
-      font-size: 14px;
-      color: #b8b8b8;
+
+    .form-item {
+      border-bottom: 1px solid #f3f1f2;
+      padding: 8px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      .inp {
+        display: block;
+        border: none;
+        outline: none;
+        height: 32px;
+        font-size: 14px;
+        flex: 1;
+      }
+      img {
+        width: 94px;
+        height: 31px;
+      }
+      button {
+        height: 31px;
+        border: none;
+        font-size: 13px;
+        color: #cea26a;
+        background-color: transparent;
+        padding-right: 9px;
+      }
+    }
+
+    .login-btn {
+      width: 100%;
+      height: 42px;
+      margin-top: 39px;
+      background: linear-gradient(90deg, #ecb53c, #ff9211);
+      color: #fff;
+      border-radius: 39px;
+      box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+      letter-spacing: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
-
-  .form-item {
-    border-bottom: 1px solid #f3f1f2;
-    padding: 8px;
-    margin-bottom: 14px;
-    display: flex;
-    align-items: center;
-    .inp {
-      display: block;
-      border: none;
-      outline: none;
-      height: 32px;
-      font-size: 14px;
-      flex: 1;
-    }
-    img {
-      width: 94px;
-      height: 31px;
-    }
-    button {
-      height: 31px;
-      border: none;
-      font-size: 13px;
-      color: #cea26a;
-      background-color: transparent;
-      padding-right: 9px;
-    }
-  }
-
-  .login-btn {
-    width: 100%;
-    height: 42px;
-    margin-top: 39px;
-    background: linear-gradient(90deg,#ecb53c,#ff9211);
-    color: #fff;
-    border-radius: 39px;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,.1);
-    letter-spacing: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
 </style>
 ```
 
@@ -677,7 +696,7 @@ export default {
 }
 ```
 
-## 13. request模块 - axios封装
+## 13. request 模块 - axios 封装
 
 接口文档：<https://apifox.com/apidoc/shared-12ab6b18-adc2-444c-ad11-0e60f5693f66/doc-2221080>
 
@@ -705,46 +724,52 @@ npm i axios
 
 ```js
 /* 封装axios用于发送请求 */
-import axios from 'axios'
+import axios from "axios";
 
 // 创建一个新的axios实例
 const request = axios.create({
-  baseURL: 'http://cba.itlike.com/public/index.php?s=/api/',
+  baseURL: "http://cba.itlike.com/public/index.php?s=/api/",
   timeout: 5000
-})
+});
 
 // 添加请求拦截器
-request.interceptors.request.use(function (config) {
-  // 在发送请求之前做些什么
-  return config
-}, function (error) {
-  // 对请求错误做些什么
-  return Promise.reject(error)
-})
+request.interceptors.request.use(
+  function (config) {
+    // 在发送请求之前做些什么
+    return config;
+  },
+  function (error) {
+    // 对请求错误做些什么
+    return Promise.reject(error);
+  }
+);
 
 // 添加响应拦截器
-request.interceptors.response.use(function (response) {
-  // 对响应数据做点什么
-  return response.data
-}, function (error) {
-  // 对响应错误做点什么
-  return Promise.reject(error)
-})
+request.interceptors.response.use(
+  function (response) {
+    // 对响应数据做点什么
+    return response.data;
+  },
+  function (error) {
+    // 对响应错误做点什么
+    return Promise.reject(error);
+  }
+);
 
-export default request
+export default request;
 ```
 
 1. 获取图形验证码，请求测试
 
 ```js
-import request from '@/utils/request'
+import request from "@/utils/request";
 export default {
-  name: 'LoginPage',
-  async created () {
-    const res = await request.get('/captcha/image')
-    console.log(res)
+  name: "LoginPage",
+  async created() {
+    const res = await request.get("/captcha/image");
+    console.log(res);
   }
-}
+};
 ```
 
 ![image-20230617161654856](assets/image-20230617161654856.png)
@@ -781,7 +806,7 @@ methods: {
 <img v-if="picUrl" :src="picUrl" @click="getPicCode">
 ```
 
-## 15. 封装api接口 - 图片验证码接口
+## 15. 封装 api 接口 - 图片验证码接口
 
 **1.目标：**将请求封装成方法，统一存放到 api 模块，与页面分离
 
@@ -789,31 +814,31 @@ methods: {
 
 ![image-20230619121937770](assets/image-20230619121937770.png)
 
-+ 页面中充斥着请求代码
+- 页面中充斥着请求代码
 
-+ 可阅读性不高
+- 可阅读性不高
 
-+ **相同的请求没有复用请求没有统一管理**
+- **相同的请求没有复用请求没有统一管理**
 
 **3.期望：**
 
 ![image-20230619122706439](assets/image-20230619122706439.png)
 
-+ 请求与页面逻辑分离
-+ 相同的请求可以直接复用请求
-+ 进行了统一管理
+- 请求与页面逻辑分离
+- 相同的请求可以直接复用请求
+- 进行了统一管理
 
 **4.具体实现**
 
 新建 `api/login.js` 提供获取图形验证码 Api 函数
 
 ```jsx
-import request from '@/utils/request'
+import request from "@/utils/request";
 
 // 获取图形验证码
 export const getPicCode = () => {
-  return request.get('/captcha/image')
-}
+  return request.get("/captcha/image");
+};
 ```
 
 `login/index.vue`页面中调用测试
@@ -835,21 +860,21 @@ async getPicCode () {
 1. 导入调用 ( **组件内** 或 **非组件中均可** )
 
 ```jsx
-import { Toast } from 'vant';
-Toast('提示内容');
+import { Toast } from "vant";
+Toast("提示内容");
 ```
 
-1. 通过this直接调用 ( **组件内**)
+1. 通过 this 直接调用 ( **组件内**)
 
 main.js 注册绑定到原型
 
 ```js
-import { Toast } from 'vant';
-Vue.use(Toast)
+import { Toast } from "vant";
+Vue.use(Toast);
 ```
 
 ```jsx
-this.$toast('提示内容')
+this.$toast("提示内容");
 ```
 
 ## 17. 短信验证倒计时功能
@@ -919,12 +944,12 @@ data () {
     picCode: '' // 图形验证码
   }
 },
-    
+
 <input v-model="mobile" class="inp" maxlength="11" placeholder="请输入手机号码" type="text">
 <input v-model="picCode" class="inp" maxlength="5" placeholder="请输入图形验证码" type="text">
 ```
 
-1. methods中封装校验方法
+1. methods 中封装校验方法
 
 ```jsx
 // 校验输入框内容
@@ -960,14 +985,14 @@ async getCode () {
 ```jsx
 // 获取短信验证码
 export const getMsgCode = (captchaCode, captchaKey, mobile) => {
-  return request.post('/captcha/sendSmsCaptcha', {
+  return request.post("/captcha/sendSmsCaptcha", {
     form: {
       captchaCode,
       captchaKey,
       mobile
     }
-  })
-}
+  });
+};
 ```
 
 1. 调用接口，添加提示
@@ -983,29 +1008,29 @@ async getCode () {
     // 发送请求，获取验证码
     await getMsgCode(this.picCode, this.picKey, this.mobile)
     this.$toast('发送成功，请注意查收')
-    
+
     // 开启倒计时
     ...
   }
 }
 ```
 
-## 18. 封装api接口 - 登录功能
+## 18. 封装 api 接口 - 登录功能
 
 `api/login.js` 提供登录 Api 函数
 
 ```jsx
 // 验证码登录
 export const codeLogin = (mobile, smsCode) => {
-  return request.post('/passport/login', {
+  return request.post("/passport/login", {
     form: {
       isParty: false,
       mobile,
       partyData: {},
       smsCode
     }
-  })
-}
+  });
+};
 ```
 
 `login/index.vue` 登录功能
@@ -1063,38 +1088,38 @@ request.interceptors.response.use(function (response) {
 
 ## 20. 将登录权证信息存入 vuex
 
-1. 新建 vuex user 模块  store/modules/user.js
+1. 新建 vuex user 模块 store/modules/user.js
 
 ```jsx
 export default {
   namespaced: true,
-  state () {
+  state() {
     return {
       userInfo: {
-        token: '',
-        userId: ''
-      },
-    }
+        token: "",
+        userId: ""
+      }
+    };
   },
   mutations: {},
   actions: {}
-}
+};
 ```
 
 1. 挂载到 vuex 上
 
 ```jsx
-import Vue from 'vue'
-import Vuex from 'vuex'
-import user from './modules/user'
+import Vue from "vue";
+import Vuex from "vuex";
+import user from "./modules/user";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   modules: {
-    user,
+    user
   }
-})
+});
 ```
 
 1. 提供 mutations
@@ -1123,52 +1148,54 @@ async login () {
 }
 ```
 
-## 21. vuex持久化处理
+## 21. vuex 持久化处理
 
 1. 新建 `utils/storage.js` 封装方法
 
 ```jsx
-const INFO_KEY = 'hm_shopping_info'
+const INFO_KEY = "hm_shopping_info";
 
 // 获取个人信息
 export const getInfo = () => {
-  const result = localStorage.getItem(INFO_KEY)
-  return result ? JSON.parse(result) : {
-    token: '',
-    userId: ''
-  }
-}
+  const result = localStorage.getItem(INFO_KEY);
+  return result
+    ? JSON.parse(result)
+    : {
+        token: "",
+        userId: ""
+      };
+};
 
 // 设置个人信息
 export const setInfo = (info) => {
-  localStorage.setItem(INFO_KEY, JSON.stringify(info))
-}
+  localStorage.setItem(INFO_KEY, JSON.stringify(info));
+};
 
 // 移除个人信息
 export const removeInfo = () => {
-  localStorage.removeItem(INFO_KEY)
-}
+  localStorage.removeItem(INFO_KEY);
+};
 ```
 
 1. vuex user 模块持久化处理
 
 ```jsx
-import { getInfo, setInfo } from '@/utils/storage'
+import { getInfo, setInfo } from "@/utils/storage";
 export default {
   namespaced: true,
-  state () {
+  state() {
     return {
       userInfo: getInfo()
-    }
+    };
   },
   mutations: {
-    setUserInfo (state, obj) {
-      state.userInfo = obj
-      setInfo(obj)
+    setUserInfo(state, obj) {
+      state.userInfo = obj;
+      setInfo(obj);
     }
   },
   actions: {}
-}
+};
 ```
 
 ## 22. 优化：添加请求 loading 效果
@@ -1177,40 +1204,46 @@ export default {
 
 ```jsx
 // 添加请求拦截器
-request.interceptors.request.use(function (config) {
-  // 在发送请求之前做些什么
-  Toast.loading({
-    message: '请求中...',
-    forbidClick: true,
-    loadingType: 'spinner',
-    duration: 0
-  })
-  return config
-}, function (error) {
-  // 对请求错误做些什么
-  return Promise.reject(error)
-})
+request.interceptors.request.use(
+  function (config) {
+    // 在发送请求之前做些什么
+    Toast.loading({
+      message: "请求中...",
+      forbidClick: true,
+      loadingType: "spinner",
+      duration: 0
+    });
+    return config;
+  },
+  function (error) {
+    // 对请求错误做些什么
+    return Promise.reject(error);
+  }
+);
 ```
 
 1. 响应时，关闭 loading
 
 ```jsx
 // 添加响应拦截器
-request.interceptors.response.use(function (response) {
-  const res = response.data
-  if (res.status !== 200) {
-    Toast(res.message)
-    return Promise.reject(res.message)
-  } else {
-    // 清除 loading 中的效果
-    Toast.clear()
+request.interceptors.response.use(
+  function (response) {
+    const res = response.data;
+    if (res.status !== 200) {
+      Toast(res.message);
+      return Promise.reject(res.message);
+    } else {
+      // 清除 loading 中的效果
+      Toast.clear();
+    }
+    // 对响应数据做点什么
+    return res;
+  },
+  function (error) {
+    // 对响应错误做点什么
+    return Promise.reject(error);
   }
-  // 对响应数据做点什么
-  return res
-}, function (error) {
-  // 对响应错误做点什么
-  return Promise.reject(error)
-})
+);
 ```
 
 ## 23. 登录访问拦截 - 路由前置守卫
@@ -1231,31 +1264,31 @@ request.interceptors.response.use(function (response) {
 
 ```jsx
 router.beforeEach((to, from, next) => {
-  // 1. to   往哪里去， 到哪去的路由信息对象  
+  // 1. to   往哪里去， 到哪去的路由信息对象
   // 2. from 从哪里来， 从哪来的路由信息对象
   // 3. next() 是否放行
   //    如果next()调用，就是放行
   //    next(路径) 拦截到某个路径页面
-})
+});
 ```
 
 ![image-20230623173117931](assets/image-20230623173117931.png)
 
 ```jsx
-const authUrl = ['/pay', '/myorder']
+const authUrl = ["/pay", "/myorder"];
 router.beforeEach((to, from, next) => {
-  const token = store.getters.token
+  const token = store.getters.token;
   if (!authUrl.includes(to.path)) {
-    next()
-    return
+    next();
+    return;
   }
 
   if (token) {
-    next()
+    next();
   } else {
-    next('/login')
+    next("/login");
   }
-})
+});
 ```
 
 ## 24. 首页 - 静态结构准备
@@ -1459,13 +1492,13 @@ export default {}
 1. 组件按需引入
 
 ```jsx
-import { Search, Swipe, SwipeItem, Grid, GridItem } from 'vant'
+import { Search, Swipe, SwipeItem, Grid, GridItem } from "vant";
 
-Vue.use(GridItem)
-Vue.use(Search)
-Vue.use(Swipe)
-Vue.use(SwipeItem)
-Vue.use(Grid)
+Vue.use(GridItem);
+Vue.use(Search);
+Vue.use(Swipe);
+Vue.use(SwipeItem);
+Vue.use(Grid);
 ```
 
 ## 25. 首页 - 动态渲染
@@ -1473,42 +1506,44 @@ Vue.use(Grid)
 1. 封装准备接口 `api/home.js`
 
 ```jsx
-import request from '@/utils/request'
+import request from "@/utils/request";
 
 // 获取首页数据
 export const getHomeData = () => {
-  return request.get('/page/detail', {
+  return request.get("/page/detail", {
     params: {
       pageId: 0
     }
-  })
-}
+  });
+};
 ```
 
 1. 页面中请求调用
 
 ```jsx
-import GoodsItem from '@/components/GoodsItem.vue'
-import { getHomeData } from '@/api/home'
+import GoodsItem from "@/components/GoodsItem.vue";
+import { getHomeData } from "@/api/home";
 export default {
-  name: 'HomePage',
+  name: "HomePage",
   components: {
     GoodsItem
   },
-  data () {
+  data() {
     return {
       bannerList: [],
       navList: [],
       proList: []
-    }
+    };
   },
-  async created () {
-    const { data: { pageData } } = await getHomeData()
-    this.bannerList = pageData.items[1].data
-    this.navList = pageData.items[3].data
-    this.proList = pageData.items[6].data
+  async created() {
+    const {
+      data: { pageData }
+    } = await getHomeData();
+    this.bannerList = pageData.items[1].data;
+    this.navList = pageData.items[3].data;
+    this.proList = pageData.items[6].data;
   }
-}
+};
 ```
 
 1. 轮播图、导航、猜你喜欢渲染
@@ -1530,7 +1565,7 @@ export default {
     @click="$router.push('/category')"
   />
 </van-grid>
-    
+
 <!-- 猜你喜欢 -->
 <div class="guess">
   <p class="guess-title">—— 猜你喜欢 ——</p>
@@ -1668,8 +1703,8 @@ export default {
 1. 组件按需导入
 
 ```jsx
-import { Icon } from 'vant'
-Vue.use(Icon)
+import { Icon } from "vant";
+Vue.use(Icon);
 ```
 
 ## 27. 搜索 - 历史记录 - 基本管理
@@ -1699,7 +1734,7 @@ data () {
     history: ['手机', '空调', '白酒', '电视']
   }
 },
-    
+
 <div class="search-history" v-if="history.length > 0">
   ...
   <div class="list">
@@ -1746,18 +1781,18 @@ clear () {
 1. 持久化到本地 - 封装方法
 
 ```jsx
-const HISTORY_KEY = 'hm_history_list'
+const HISTORY_KEY = "hm_history_list";
 
 // 获取搜索历史
 export const getHistoryList = () => {
-  const result = localStorage.getItem(HISTORY_KEY)
-  return result ? JSON.parse(result) : []
-}
+  const result = localStorage.getItem(HISTORY_KEY);
+  return result ? JSON.parse(result) : [];
+};
 
 // 设置搜索历史
 export const setHistoryList = (arr) => {
-  localStorage.setItem(HISTORY_KEY, JSON.stringify(arr))
-}
+  localStorage.setItem(HISTORY_KEY, JSON.stringify(arr));
+};
 ```
 
 1. 页面中调用 - 实现持久化
@@ -1865,7 +1900,7 @@ export default {
 
 <img src="assets/image-20230621155728973.png" alt="image-20230621155728973" style="zoom:80%;" />
 
-1. 计算属性，基于query 解析路由参数
+1. 计算属性，基于 query 解析路由参数
 
 ```jsx
 computed: {
@@ -1887,19 +1922,19 @@ computed: {
 1. `api/product.js` 封装接口，获取搜索商品
 
 ```jsx
-import request from '@/utils/request'
+import request from "@/utils/request";
 
 // 获取搜索商品列表数据
 export const getProList = (paramsObj) => {
-  const { categoryId, goodsName, page } = paramsObj
-  return request.get('/goods/list', {
+  const { categoryId, goodsName, page } = paramsObj;
+  return request.get("/goods/list", {
     params: {
       categoryId,
       goodsName,
       page
     }
-  })
-}
+  });
+};
 ```
 
 1. 页面中基于 goodsName 发送请求，动态渲染
@@ -1924,19 +1959,19 @@ async created () {
 </div>
 ```
 
-### (2) 分类id搜索
+### (2) 分类 id 搜索
 
 <img src="assets/image-20230624231331980.png" alt="image-20230624231331980" style="zoom:67%;" />
 
 1 封装接口 `api/category.js`
 
 ```jsx
-import request from '@/utils/request'
+import request from "@/utils/request";
 
 // 获取分类数据
 export const getCategoryData = () => {
-  return request.get('/category/list')
-}
+  return request.get("/category/list");
+};
 ```
 
 2 分类页静态结构
@@ -2335,7 +2370,7 @@ export default {
     }
   }
 }
-    
+
 .tips {
   padding: 10px;
 }
@@ -2345,8 +2380,8 @@ export default {
 `Lazyload` 是 `Vue` 指令，使用前需要对指令进行注册。
 
 ```jsx
-import { Lazyload } from 'vant'
-Vue.use(Lazyload)
+import { Lazyload } from "vant";
+Vue.use(Lazyload);
 ```
 
 ## 32. 商品详情 - 动态渲染介绍
@@ -2366,12 +2401,12 @@ computed: {
 ```jsx
 // 获取商品详情数据
 export const getProDetail = (goodsId) => {
-  return request.get('/goods/detail', {
+  return request.get("/goods/detail", {
     params: {
       goodsId
     }
-  })
-}
+  });
+};
 ```
 
 1. 一进入页面发送请求，获取商品详情数据
@@ -2453,13 +2488,13 @@ methods: {
 ```jsx
 // 获取商品评价
 export const getProComments = (goodsId, limit) => {
-  return request.get('/comment/listRows', {
+  return request.get("/comment/listRows", {
     params: {
       goodsId,
       limit
     }
-  })
-}
+  });
+};
 ```
 
 1. 页面调用获取数据
@@ -2479,7 +2514,7 @@ async created () {
   ...
   this.getComments()
 },
-    
+
 async getComments () {
   const { data: { list, total } } = await getProComments(this.goodsId, 3)
   this.commentList = list
@@ -2509,7 +2544,7 @@ async getComments () {
       <div class="time">
         {{ item.create_time }}
       </div>
-    </div> 
+    </div>
   </div>
 </div>
 ```
@@ -2521,8 +2556,8 @@ async getComments () {
 1. 按需导入 van-action-sheet
 
 ```jsx
-import { ActionSheet } from 'vant'
-Vue.use(ActionSheet)
+import { ActionSheet } from "vant";
+Vue.use(ActionSheet);
 ```
 
 1. 准备 van-action-sheet 基本结构
@@ -2531,7 +2566,7 @@ Vue.use(ActionSheet)
 <van-action-sheet v-model="showPannel" :title="mode === 'cart' ? '加入购物车' : '立刻购买'">
  111
 </van-action-sheet>
-    
+
 data () {
   return {
     ...
@@ -2622,7 +2657,8 @@ buyFn () {
     align-items: center;
   }
 
-  .btn, .btn-none {
+  .btn,
+  .btn-none {
     height: 40px;
     line-height: 40px;
     margin: 20px;
@@ -2688,7 +2724,7 @@ buyFn () {
   </div>
 </template>
 
-    
+
 <script>
 export default {
   props: {
@@ -2722,7 +2758,7 @@ export default {
   }
 }
 </script>
-    
+
 
 <style lang="less" scoped>
 .count-box {
@@ -2785,8 +2821,8 @@ export default {
 1. 按需注册 dialog 组件
 
 ```jsx
-import { Dialog } from 'vant'
-Vue.use(Dialog)
+import { Dialog } from "vant";
+Vue.use(Dialog);
 ```
 
 1. 按钮注册点击事件
@@ -2826,8 +2862,8 @@ async addCart () {
 
 ```jsx
 // 判断有无回跳地址
-const url = this.$route.query.backUrl || '/'
-this.$router.replace(url)
+const url = this.$route.query.backUrl || "/";
+this.$router.replace(url);
 ```
 
 ## 37. 加入购物车 - 封装接口进行请求
@@ -2839,12 +2875,12 @@ this.$router.replace(url)
 ```jsx
 // 加入购物车
 export const addCart = (goodsId, goodsNum, goodsSkuId) => {
-  return request.post('/cart/add', {
+  return request.post("/cart/add", {
     goodsId,
     goodsNum,
     goodsSkuId
-  })
-}
+  });
+};
 ```
 
 1. 页面中调用请求
@@ -2853,7 +2889,7 @@ export const addCart = (goodsId, goodsNum, goodsSkuId) => {
 data () {
   return {
       cartTotal: 0
-  }  
+  }
 },
 
 async addCart () {
@@ -2890,7 +2926,9 @@ instance.interceptors.request.use(function (config) {
 
 ```jsx
 <div class="icon-cart">
-  <span v-if="cartTotal > 0" class="num">{{ cartTotal }}</span>
+  <span v-if="cartTotal > 0" class="num">
+    {{ cartTotal }}
+  </span>
   <van-icon name="shopping-cart-o" />
   <span>购物车</span>
 </div>
@@ -3122,8 +3160,8 @@ export default {
 1. 按需导入组件
 
 ```jsx
-import { Checkbox } from 'vant'
-Vue.use(Checkbox)
+import { Checkbox } from "vant";
+Vue.use(Checkbox);
 ```
 
 ## 39. 购物车 - 构建 vuex 模块 - 获取数据存储
@@ -3135,39 +3173,36 @@ Vue.use(Checkbox)
 ```jsx
 export default {
   namespaced: true,
-  state () {
+  state() {
     return {
       cartList: []
-    }
+    };
   },
-  mutations: {
-  },
-  actions: {
-  },
-  getters: {
-  }
-}
+  mutations: {},
+  actions: {},
+  getters: {}
+};
 ```
 
 1. 挂载到 store 上面
 
 ```jsx
-import Vue from 'vue'
-import Vuex from 'vuex'
-import user from './modules/user'
-import cart from './modules/cart'
+import Vue from "vue";
+import Vuex from "vuex";
+import user from "./modules/user";
+import cart from "./modules/cart";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   getters: {
-    token: state => state.user.userInfo.token
+    token: (state) => state.user.userInfo.token
   },
   modules: {
     user,
     cart
   }
-})
+});
 ```
 
 1. 封装 API 接口 `api/cart.js`
@@ -3175,8 +3210,8 @@ export default new Vuex.Store({
 ```jsx
 // 获取购物车列表数据
 export const getCartList = () => {
-  return request.get('/cart/list')
-}
+  return request.get("/cart/list");
+};
 ```
 
 1. 封装 action 和 mutation
@@ -3248,7 +3283,7 @@ computed: {
 
 ## 41. 购物车 - 封装 getters - 动态计算展示
 
-1. 封装 getters：商品总数  / 选中的商品列表  /   选中的商品总数  /   选中的商品总价
+1. 封装 getters：商品总数 / 选中的商品列表 / 选中的商品总数 / 选中的商品总价
 
 ```jsx
 getters: {
@@ -3275,7 +3310,7 @@ getters: {
 computed: {
   ...mapGetters('cart', ['cartTotal', 'selCount', 'selPrice']),
 },
-    
+
 <!-- 购物车开头 -->
 <div class="cart-title">
   <span class="all">共<i>{{ cartTotal || 0 }}</i>件商品</span>
@@ -3316,7 +3351,7 @@ getters: {
     return state.cartList.every(item => item.isChecked)
   }
 }
-    
+
 ...mapGetters('cart', ['isAllChecked']),
 
 <div class="all-check">
@@ -3329,11 +3364,11 @@ getters: {
 
 ```jsx
 <van-checkbox @click="toggleCheck(item.goods_id)" ...></van-checkbox>
-    
+
 toggleCheck (goodsId) {
   this.$store.commit('cart/toggleCheck', goodsId)
 },
-    
+
 mutations: {
   toggleCheck (state, goodsId) {
     const goods = state.cartList.find(item => item.goods_id === goodsId)
@@ -3370,12 +3405,12 @@ mutations: {
 ```jsx
 // 更新购物车商品数量
 export const changeCount = (goodsId, goodsNum, goodsSkuId) => {
-  return request.post('/cart/update', {
+  return request.post("/cart/update", {
     goodsId,
     goodsNum,
     goodsSkuId
-  })
-}
+  });
+};
 ```
 
 1. 页面中注册点击事件，传递数据
@@ -3464,10 +3499,10 @@ watch: {
 ```jsx
 // 删除购物车
 export const delSelect = (cartIds) => {
-  return request.post('/cart/clear', {
+  return request.post("/cart/clear", {
     cartIds
-  })
-}
+  });
+};
 ```
 
 1. 注册删除点击事件
@@ -3836,12 +3871,12 @@ export default {
 1 封装获取地址的接口
 
 ```jsx
-import request from '@/utils/request'
+import request from "@/utils/request";
 
 // 获取地址列表
 export const getAddressList = () => {
-  return request.get('/address/list')
-}
+  return request.get("/address/list");
+};
 ```
 
 2 页面中 - 调用获取地址
@@ -3855,7 +3890,7 @@ data () {
 computed: {
   selectAddress () {
     // 这里地址管理不是主线业务，直接获取默认第一条地址
-    return this.addressList[0] 
+    return this.addressList[0]
   }
 },
 async created () {
@@ -3904,9 +3939,9 @@ computed: {
 
    ① mode="buyNow"
 
-   ② goodsId="商品id"
+   ② goodsId="商品 id"
 
-   ③ goodsSkuId="商品skuId"
+   ③ goodsSkuId="商品 skuId"
 
 都需要跳转时将参数传递过来
 
@@ -3915,10 +3950,10 @@ computed: {
 封装通用 API 接口 `api/order`
 
 ```jsx
-import request from '@/utils/request'
+import request from "@/utils/request";
 
 export const checkOrder = (mode, obj) => {
-  return request.get('/checkout/order', {
+  return request.get("/checkout/order", {
     params: {
       mode,
       delivery: 0,
@@ -3926,8 +3961,8 @@ export const checkOrder = (mode, obj) => {
       isUsePoints: 0,
       ...obj
     }
-  })
-}
+  });
+};
 ```
 
 ### (4) 订单结算 - 购物车结算
@@ -3952,7 +3987,7 @@ goPay () {
 }
 ```
 
-2 页面中接收参数,   调用接口，获取数据
+2 页面中接收参数, 调用接口，获取数据
 
 ```jsx
 data () {
@@ -3961,7 +3996,7 @@ data () {
     personal: {}
   }
 },
-    
+
 computed: {
   mode () {
     return this.$route.query.mode
@@ -4096,7 +4131,7 @@ computed: {
 ```jsx
 async getOrderList () {
   ...
-  
+
   if (this.mode === 'buyNow') {
     const { data: { order, personal } } = await checkOrder(this.mode, {
       goodsId: this.goodsId,
@@ -4111,7 +4146,7 @@ async getOrderList () {
 
 ### (6) mixins 复用 - 处理登录确认框的弹出
 
-1 新建一个 mixin 文件   `mixins/loginConfirm.js`
+1 新建一个 mixin 文件 `mixins/loginConfirm.js`
 
 ```jsx
 export default {
@@ -4119,32 +4154,32 @@ export default {
     // 是否需要弹登录确认框
     // (1) 需要，返回 true，并直接弹出登录确认框
     // (2) 不需要，返回 false
-    loginConfirm () {
+    loginConfirm() {
       if (!this.$store.getters.token) {
-        this.$dialog.confirm({
-          title: '温馨提示',
-          message: '此时需要先登录才能继续操作哦',
-          confirmButtonText: '去登陆',
-          cancelButtonText: '再逛逛'
-        })
+        this.$dialog
+          .confirm({
+            title: "温馨提示",
+            message: "此时需要先登录才能继续操作哦",
+            confirmButtonText: "去登陆",
+            cancelButtonText: "再逛逛"
+          })
           .then(() => {
             // 如果希望，跳转到登录 => 登录后能回跳回来，需要在跳转去携带参数 (当前的路径地址)
             // this.$route.fullPath (会包含查询参数)
             this.$router.replace({
-              path: '/login',
+              path: "/login",
               query: {
                 backUrl: this.$route.fullPath
               }
-            })
+            });
           })
-          .catch(() => {})
-        return true
+          .catch(() => {});
+        return true;
       }
-      return false
+      return false;
     }
   }
-}
-
+};
 ```
 
 2 页面中导入，混入方法
@@ -4196,15 +4231,15 @@ goBuyNow () {
 ```jsx
 // 提交订单
 export const submitOrder = (mode, params) => {
-  return request.post('/checkout/submit', {
+  return request.post("/checkout/submit", {
     mode,
     delivery: 10, // 物流方式  配送方式 (10快递配送 20门店自提)
     couponId: 0, // 优惠券 id
     payType: 10, // 余额支付
     isUsePoints: 0, // 是否使用积分
     ...params
-  })
-}
+  });
+};
 ```
 
 2 买家留言绑定
@@ -4434,9 +4469,9 @@ export default {
 3 导入注册
 
 ```jsx
-import { Tab, Tabs } from 'vant'
-Vue.use(Tab)
-Vue.use(Tabs)
+import { Tab, Tabs } from "vant";
+Vue.use(Tab);
+Vue.use(Tabs);
 ```
 
 ### (2) 点击 tab 切换渲染
@@ -4446,13 +4481,13 @@ Vue.use(Tabs)
 ```jsx
 // 订单列表
 export const getMyOrderList = (dataType, page) => {
-  return request.get('/order/list', {
+  return request.get("/order/list", {
     params: {
       dataType,
       page
     }
-  })
-}
+  });
+};
 ```
 
 2 给 tab 绑定 name 属性
@@ -4559,15 +4594,15 @@ export default {
 
 ## 50. 个人中心 - 基本渲染
 
-1 封装获取个人信息 - API接口
+1 封装获取个人信息 - API 接口
 
 ```jsx
-import request from '@/utils/request'
+import request from "@/utils/request";
 
 // 获取个人信息
 export const getUserInfoDetail = () => {
-  return request.get('/user/info')
-}
+  return request.get("/user/info");
+};
 ```
 
 2 调用接口，获取数据进行渲染
@@ -4895,31 +4930,31 @@ actions: {
 
 ## 52. 项目打包优化
 
-vue脚手架只是开发过程中，协助开发的工具，当真正开发完了 => 脚手架不参与上线
+vue 脚手架只是开发过程中，协助开发的工具，当真正开发完了 => 脚手架不参与上线
 
 参与上线的是 => 打包后的源代码
 
 打包：
 
-+ 将多个文件压缩合并成一个文件
-+ 语法降级
-+ less sass ts 语法解析, 解析成css
-+ ....
+- 将多个文件压缩合并成一个文件
+- 语法降级
+- less sass ts 语法解析, 解析成 css
+- ....
 
 打包后，可以生成，浏览器能够直接运行的网页 => 就是需要上线的源码！
 
 ### (1) 打包命令
 
-vue脚手架工具已经提供了打包命令，直接使用即可。
+vue 脚手架工具已经提供了打包命令，直接使用即可。
 
 ```bash
 yarn build
 npm run buil
 ```
 
-在项目的根目录会自动创建一个文件夹`dist`,dist中的文件就是打包后的文件，只需要放到服务器中即可。
+在项目的根目录会自动创建一个文件夹`dist`,dist 中的文件就是打包后的文件，只需要放到服务器中即可。
 
-### (2) 配置publicPath
+### (2) 配置 publicPath
 
 vue.config.js
 
@@ -4927,8 +4962,8 @@ vue.config.js
 module.exports = {
   // 设置获取.js,.css文件时，是以相对地址为基准的。
   // https://cli.vuejs.org/zh/config/#publicpath
-  publicPath: './'
-}
+  publicPath: "./"
+};
 ```
 
 ### (3) 路由懒加载
@@ -4944,7 +4979,7 @@ router/index.js
 按需异步导入
 
 ```js
-const ProDetail = () => import('@/views/prodetail')
-const Pay = () => import('@/views/pay')
-const MyOrder = () => import('@/views/myorder')
+const ProDetail = () => import("@/views/prodetail");
+const Pay = () => import("@/views/pay");
+const MyOrder = () => import("@/views/myorder");
 ```
